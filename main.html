@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+
+<body>
+    <header id="header">DIETO<span>BOT</span><div><span>HEALTH IS WEALTH</span> </div></div></header>
+    <div id="front-page">
+    <div id="front-cards">
+     <a onclick="location.href='INPUT.html'"> <div class="card">
+            <i class="fas fa-power-off fa-3x " style="margin:20px;"></i>
+    <p style="font-size:20px;">START</p>
+        </div>
+     </a>
+       
+</body>
+</html>
+<style>
+  @font-face{
+    font-family: "minimal";
+    src: url("fonts/NotoSansJP-Regular.otf");    
+}
+
+@font-face{
+    font-family: "regularminimal";
+    src: url("fonts/NotoSansJP-Medium.otf");
+}
+:root{
+    --light:#00adb5;
+}
+*{
+    outline: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #1b1b1b;
+    font-family: "regularminimal";
+
+}
+
+body{
+
+    color: #1b1b1b;
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
+#god{
+    width: 100%;
+
+}
+
+#header{
+    color: #00adb5;
+    letter-spacing: 10px;
+    display: inline-block;
+    position: absolute;
+    font-size: 2rem;
+    padding: 10px 20px;
+    left: 0px;
+    top:0px;
+    font-family: "minimal";
+}
+#header span{
+    color: #1b1b1b;
+}
+#header div span{
+    color: var(--light);
+    font-size: 20px;
+}
+#header div{
+    font-size: 1rem;
+    letter-spacing: 0px;
+}
+#front-page{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 12%;
+}
+a{
+    text-decoration: none;
+   
+}
+
+#front-cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+  
+    
+}
+
+#front-cards div{
+    
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    color: #1b1b1b;
+    box-shadow: -4px -4px 3px #FFF, 4px 4px 3px rgba(0, 0, 0, 0.3);
+    
+}
+#front-cards div:hover{
+  
+    box-shadow:  inset 4px 4px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+

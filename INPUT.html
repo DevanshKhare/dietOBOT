@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+<form class="box" action="connect.php" method="POST">
+  <h1>Enter YOUR DETAILS</h1>
+
+  <input type="text" id="name"name="name" placeholder="NAME">
+  <input type="text" id="age" name="age" placeholder="AGE">
+  <input type="text" id="email" name="email" placeholder="EMAIL">
+  <input type="text" id="weight" name="weight" placeholder="WEIGHT IN KG">
+  <input type="text" id="height" name="height" placeholder="HEIGHT IN CM">
+  <label for="gender" style="color: #3498db;">Choose a gender:</label>
+  <select id="gender" name="gender" >
+    <option value="m">Male</option>
+    <option value="f">Female</option>
+    <option value="o">Others</option>
+  </select>
+  <input type="submit" name="" value="GENERATE DIET" onclick="disp()">
+</form>
+  
+  </body>
+</html>
+<style>
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #010B13;
+  }
+  .box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #191919;
+    text-align: center;
+  }
+  .box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .box input[type = "text"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+  }
+  .box input[type = "submit"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .box input[type = "submit"]:hover{
+    background: #2ecc71;
+  }
+  
+</style>
+<script>
+  function disp(){
+  var age=document.getElementById('age').value;
+
+  var height =document.getElementById('height').value;
+  
+  var weight =document.getElementById('weight').value;
+  
+  var gender=document.getElementById('gender').value;
+  //AGE GROUP 7 to 9 START
+  //male
+if((gender=='m')&&(age>=7&&age<=9)&&(weight>=22&&weight<=28.5)&&(height>=121&&height<=133)){
+  alert("PERFECT WEIGHT & HEIGHT");
+  window.open("7-9mnw.jpg",'_blank');
+}
+else if((gender=='m')&&(age>=7&&age<=9)&&(weight<22)&&(height>=121&&height<=133)){
+  alert("PERFECT HEIGHT & BUT LESS WEIGHT");
+  window.open("7-9muw.jpg",'_blank');
+}
+else if((gender=='m')&&(age>=7&&age<=9)&&(weight>28.5)&&(height>=121&&height<=133)){
+  alert("PERFECT HEIGHT & BUT OVER WEIGHT");
+  window.open("7-9mow.jpg",'_blank');
+}
+else if((gender=='m')&&(age>=7&&age<=9)&&(weight>=22&&weight<=28.5)&&(height<121)){
+  alert("PERFECT WEIGHT & BUT LESS HEIGHT");
+  window.open("7-9mnw.jpg",'_blank');
+}
+else if((gender=='m')&&(age>=7&&age<=9)&&(weight>=22&&weight<=28.5)&&(height>133)){
+  alert("PERFECT WEIGHT & BUT OVER HEIGHT");
+  window.open("7-9mnw.jpg",'_blank');
+}
+else if((gender=='m')&&(age>=7&&age<=9)&&(weight<22)&&(height<121)){
+  alert("LESS WEIGHT & LESS HEIGHT");
+  window.open("7-9muw.jpg",'_blank');
+}
+else if((gender=='m')&&(age>=7&&age<=9)&&(weight>28.5)&&(height>133)){
+  alert("OVER WEIGHT & OVER HEIGHT");
+  window.open("7-9mow.jpg",'_blank');
+}
+else if((gender=='m')&&(age>=7&&age<=9)&&(weight>28.5)&&(height<121)){
+  alert("OVER WEIGHT & LESS HEIGHT");
+  window.open("7-9mow.jpg",'_blank');
+}
+else if((gender=='m')&&(age>=7&&age<=9)&&(weight<22)&&(height>133)){
+  alert("OVER HEIGHT & LESS WEIGHT");
+  window.open("7-9muw.jpg",'_blank');
+}
+
+//female
+if((gender=='f')&&(age>=7&&age<=9)&&(weight>=21.8&&weight<=28.5)&&(height>=120.6&&height<=132.2)){
+  alert("PERFECT WEIGHT & HEIGHT");
+  window.open("7-9fnw.jpg",'_blank');
+}
+else if((gender=='f')&&(age>=7&&age<=9)&&(weight<21.8)&&(height>=120.6&&height<=132.2)){
+  alert("PERFECT HEIGHT & BUT LESS WEIGHT");
+  window.open("7-9fuw.jpg",'_blank');
+}
+else if((gender=='f')&&(age>=7&&age<=9)&&(weight>28.5)&&(height>=120.6&&height<=132.2)){
+  alert("PERFECT HEIGHT & BUT OVER WEIGHT");
+  window.open("7-9fow.jpg",'_blank');
+}
+else if((gender=='f')&&(age>=7&&age<=9)&&(weight>=21.8&&weight<=28.5)&&(height<120.6)){
+  alert("PERFECT WEIGHT & BUT LESS HEIGHT");
+  window.open("7-9fnw.jpg",'_blank');
+}
+else if((gender=='f')&&(age>=7&&age<=9)&&(weight>=21.8&&weight<=28.5)&&(height>132.2)){
+  alert("PERFECT WEIGHT & BUT OVER HEIGHT");
+  window.open("7-9fnw.jpg",'_blank');
+}
+else if((gender=='f')&&(age>=7&&age<=9)&&(weight<21.8)&&(height<120.6)){
+  alert("LESS WEIGHT & LESS HEIGHT");
+  window.open("7-9fuw.jpg",'_blank');
+}
+else if((gender=='f')&&(age>=7&&age<=9)&&(weight>28.5)&&(height>132.2)){
+  alert("OVER WEIGHT & OVER HEIGHT");
+  window.open("7-9fow.jpg",'_blank');
+}
+else if((gender=='f')&&(age>=7&&age<=9)&&(weight>28.5)&&(height<120.6)){
+  alert("OVER WEIGHT & LESS HEIGHT");
+  window.open("7-9fow.jpg",'_blank');
+}
+else if((gender=='f')&&(age>=7&&age<=9)&&(weight<21.8)&&(height>132.2)){
+  alert("OVER HEIGHT & LESS WEIGHT");
+  window.open("7-9fuw.jpg",'_blank');
+}
+
+
+//AGE GROUP 7 TO 9 ENDS
+
+ //AGE GROUP 10 to 12 Starts
+ if((gender=='m')&&(age>=10&&age<=12)&&(weight>=31.4&&weight<=37)&&(height>=137.5&&height<=147)){
+    alert("PERFECT WEIGHT & HEIGHT");
+    window.open("10-12mnw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=10&&age<=12)&&(weight<31.4)&&(height>=137.5&&height<=147)){
+    alert("PERFECT HEIGHT & BUT LESS WEIGHT");
+    window.open("10-12muw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=10&&age<=12)&&(weight>37)&&(height>=137.5&&height<=147)){
+    alert("PERFECT HEIGHT & BUT OVER WEIGHT");
+    window.open("10-12mow.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=10&&age<=12)&&(weight>=31.4&&weight<=37)&&(height<137.5)){
+    alert("PERFECT WEIGHT & BUT LESS HEIGHT");
+    window.open("10-12mnw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=10&&age<=12)&&(weight>=31.4&&weight<=37)&&(height>147)){
+    alert("PERFECT WEIGHT & BUT OVER HEIGHT");
+    window.open("10-12mnw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=10&&age<=12)&&(weight<31.4)&&(height<137.5)){
+    alert("LESS WEIGHT & LESS HEIGHT");
+    window.open("10-12muw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=10&&age<=12)&&(weight>37)&&(height>147)){
+    alert("OVER WEIGHT & OVER HEIGHT");
+    window.open("10-12mow.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=10&&age<=12)&&(weight>37)&&(height<137.5)){
+    alert("OVER WEIGHT & LESS HEIGHT");
+    window.open("10-12mow.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=10&&age<=12)&&(weight<31.4)&&(height>147)){
+    alert("OVER HEIGHT & LESS WEIGHT");
+    window.open("10-12mow.jpg",'_blank');
+  }
+
+
+//female
+if((gender=='f')&&(age>=10&&age<=12)&&(weight>=32.5&&weight<=38.7)&&(height>=138.3&&height<=148)){
+    alert("PERFECT WEIGHT & HEIGHT");
+    window.open("10-12fnw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=10&&age<=12)&&(weight<32.5)&&(height>=138.3&&height<=148)){
+    alert("PERFECT HEIGHT & BUT LESS WEIGHT");
+    window.open("10-12fuw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=10&&age<=12)&&(weight>38.7)&&(height>=138.3&&height<=148)){
+    alert("PERFECT HEIGHT & BUT OVER WEIGHT");
+    window.open("10-12fow.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=10&&age<=12)&&(weight>=32.5&&weight<=38.7)&&(height<138.3)){
+    alert("PERFECT WEIGHT & BUT LESS HEIGHT");
+    window.open("10-12fnw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=10&&age<=12)&&(weight>=32.5&&weight<=38.7)&&(height>148)){
+    alert("PERFECT WEIGHT & BUT OVER HEIGHT");
+    window.open("10-12fnw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=10&&age<=12)&&(weight<32.5)&&(height<138.3)){
+    alert("LESS WEIGHT & LESS HEIGHT");
+    window.open("10-12fuw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=10&&age<=12)&&(weight>38.7)&&(height>148)){
+    alert("OVER WEIGHT & OVER HEIGHT");
+    window.open("10-12fow.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=10&&age<=12)&&(weight>38.7)&&(height<138.3)){
+    alert("OVER WEIGHT & LESS HEIGHT");
+    window.open("10-12fow.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=10&&age<=12)&&(weight<32.5)&&(height>148)){
+    alert("OVER HEIGHT & LESS WEIGHT");
+    window.open("10-12fuw.jpg",'_blank');
+  }
+  
+  //age grp 10 to 12 ends
+  
+  //AGE GRP 13 TO 18 STARTS
+
+  if((gender=='m')&&(age>=13&&age<=18)&&(weight>=40.9&&weight<=65)&&(height>=153&&height<=177)){
+    alert("PERFECT WEIGHT & HEIGHT");
+    window.open("13-18mnw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=13&&age<=18)&&(weight<40.9)&&(height>=153&&height<=177)){
+    alert("PERFECT HEIGHT & BUT LESS WEIGHT");
+    window.open("13-18muw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=13&&age<=18)&&(weight>65)&&(height>=153&&height<=177)){
+    alert("PERFECT HEIGHT & BUT OVER WEIGHT");
+    window.open("13-18mow.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=13&&age<=18)&&(weight>=40.9&&weight<=65)&&(height<153)){
+    alert("PERFECT WEIGHT & BUT LESS HEIGHT");
+    window.open("13-18mnw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=13&&age<=18)&&(weight>=40.9&&weight<=65)&&(height>177)){
+    alert("PERFECT WEIGHT & BUT OVER HEIGHT");
+    window.open("13-18mnw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=13&&age<=18)&&(weight<40.9)&&(height<153)){
+    alert("LESS WEIGHT & LESS HEIGHT");
+    window.open("13-18muw.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=13&&age<=18)&&(weight>65)&&(height>177)){
+    alert("OVER WEIGHT & OVER HEIGHT");
+    window.open("13-18mow.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=13&&age<=18)&&(weight>65)&&(height<153)){
+    alert("OVER WEIGHT & LESS HEIGHT");
+    window.open("13-18mow.jpg",'_blank');
+  }
+  else if((gender=='m')&&(age>=13&&age<=18)&&(weight<40.9)&&(height>177)){
+    alert("OVER HEIGHT & LESS WEIGHT");
+    window.open("13-18muw.jpg",'_blank');
+  }
+  //female
+
+  
+  if((gender=='f')&&(age>=13&&age<=18)&&(weight>=44&&weight<=54.4)&&(height>=150&&height<=164)){
+    alert("PERFECT WEIGHT & HEIGHT");
+    window.open("13-18fnw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=13&&age<=18)&&(weight<44)&&(height>=150&&height<=164)){
+    alert("PERFECT HEIGHT & BUT LESS WEIGHT");
+    window.open("13-18fuw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=13&&age<=18)&&(weight>54.4)&&(height>=150&&height<=164)){
+    alert("PERFECT HEIGHT & BUT OVER WEIGHT");
+    window.open("13-18fow.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=13&&age<=18)&&(weight>=44&&weight<=54.4)&&(height<150)){
+    alert("PERFECT WEIGHT & BUT LESS HEIGHT");
+    window.open("13-18fnw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=13&&age<=18)&&(weight>=44&&weight<=54.4)&&(height>164)){
+    alert("PERFECT WEIGHT & BUT OVER HEIGHT");
+    window.open("13-18fnw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=13&&age<=18)&&(weight<44)&&(height<150)){
+    alert("LESS WEIGHT & LESS HEIGHT");
+    window.open("13-18fuw.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=13&&age<=18)&&(weight>54.4)&&(height>164)){
+    alert("OVER WEIGHT & OVER HEIGHT");
+    window.open("13-18fow.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=13&&age<=18)&&(weight>54.4)&&(height<150)){
+    alert("OVER WEIGHT & LESS HEIGHT");
+    window.open("13-18fow.jpg",'_blank');
+  }
+  else if((gender=='f')&&(age>=13&&age<=18)&&(weight<44)&&(height>164)){
+    alert("OVER HEIGHT & LESS WEIGHT");
+    window.open("13-18fuw.jpg",'_blank');
+  }
+  //13 To 18 ENDS
+
+  }
+</script>
+
+
